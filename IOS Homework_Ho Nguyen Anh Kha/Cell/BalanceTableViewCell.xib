@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="334" id="KGk-i7-Jjw" customClass="BalanceTableViewCell" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="494" height="334"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="494" height="334"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqD-nw-baq">
+                        <rect key="frame" x="244.66666666666663" y="2.3333333333333339" width="24" height="24"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="iconEye01On"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Account Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRK-ka-tIc">
+                        <rect key="frame" x="0.0" y="0.0" width="236.66666666666666" height="28.666666666666668"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                        <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OXc-Xb-Cxk">
+                        <rect key="frame" x="0.0" y="44.666666666666657" width="494" height="48"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLi-5k-4sH">
+                                <rect key="frame" x="0.0" y="0.0" width="494" height="19.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12,345.67" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XC9-6X-lKN">
+                                <rect key="frame" x="0.0" y="19.333333333333336" width="494" height="28.666666666666664"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Qc4-iP-vi8">
+                        <rect key="frame" x="0.0" y="108.66666666666669" width="494" height="48"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03E-sP-eIs">
+                                <rect key="frame" x="0.0" y="0.0" width="33" height="19.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12,345.67" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4S7-qX-jp9">
+                                <rect key="frame" x="0.0" y="19.333333333333329" width="109.66666666666667" height="28.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I5i-JS-jPk">
+                        <rect key="frame" x="0.0" y="176.66666666666666" width="494" height="56"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSN-En-HnB" customClass="VerticalButton" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="164.66666666666666" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Transfer" image="button00ElementMenuTransfer">
+                                    <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPE-sB-ZUl" customClass="VerticalButton" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
+                                <rect key="frame" x="164.66666666666669" y="0.0" width="164.66666666666669" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Payment" image="button00ElementMenuPayment">
+                                    <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJ3-FM-a5Z" customClass="VerticalButton" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
+                                <rect key="frame" x="329.33333333333331" y="0.0" width="164.66666666666669" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Utility" image="button00ElementMenuUtility">
+                                    <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4EH-Fh-pJF">
+                        <rect key="frame" x="0.0" y="248.66666666666663" width="494" height="56"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8K-Xa-DHV" customClass="VerticalButton" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="164.66666666666666" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="QR pay scan" image="button00ElementMenuPayment">
+                                    <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBy-X9-ngL" customClass="VerticalButton" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
+                                <rect key="frame" x="164.66666666666669" y="0.0" width="164.66666666666669" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="My QR code" image="button00ElementMenuQRcode">
+                                    <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPt-AC-oai" customClass="VerticalButton" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
+                                <rect key="frame" x="329.33333333333331" y="0.0" width="164.66666666666669" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Top up" image="button00ElementMenuTopUp">
+                                    <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Qc4-iP-vi8" secondAttribute="trailing" id="4bC-gz-1b0"/>
+                    <constraint firstItem="I5i-JS-jPk" firstAttribute="top" secondItem="Qc4-iP-vi8" secondAttribute="bottom" constant="20" id="7Tc-jg-9td"/>
+                    <constraint firstItem="vRK-ka-tIc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8pi-bE-Ze4"/>
+                    <constraint firstItem="OXc-Xb-Cxk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="DJx-ER-Jfd"/>
+                    <constraint firstItem="Qc4-iP-vi8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="E7h-M2-dAl"/>
+                    <constraint firstItem="vRK-ka-tIc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FY8-JC-dka"/>
+                    <constraint firstItem="GqD-nw-baq" firstAttribute="leading" secondItem="vRK-ka-tIc" secondAttribute="trailing" constant="8" id="Fk9-i8-daf"/>
+                    <constraint firstAttribute="trailing" secondItem="4EH-Fh-pJF" secondAttribute="trailing" id="GcZ-1i-Swj"/>
+                    <constraint firstItem="4EH-Fh-pJF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Hb4-dk-RW9"/>
+                    <constraint firstItem="Qc4-iP-vi8" firstAttribute="top" secondItem="OXc-Xb-Cxk" secondAttribute="bottom" constant="16" id="Rdh-R6-Swx"/>
+                    <constraint firstItem="I5i-JS-jPk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YWi-ZP-rIm"/>
+                    <constraint firstAttribute="trailing" secondItem="I5i-JS-jPk" secondAttribute="trailing" id="bge-L1-Amj"/>
+                    <constraint firstItem="GqD-nw-baq" firstAttribute="centerY" secondItem="vRK-ka-tIc" secondAttribute="centerY" id="duq-Ph-FKB"/>
+                    <constraint firstItem="OXc-Xb-Cxk" firstAttribute="top" secondItem="vRK-ka-tIc" secondAttribute="bottom" constant="16" id="gmc-ee-Vcr"/>
+                    <constraint firstItem="4EH-Fh-pJF" firstAttribute="top" secondItem="I5i-JS-jPk" secondAttribute="bottom" constant="16" id="kDt-bE-xug"/>
+                    <constraint firstAttribute="trailing" secondItem="OXc-Xb-Cxk" secondAttribute="trailing" id="zeX-7j-mpR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="247.32824427480915" y="100.70422535211269"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="DSN-En-HnB">
+            <size key="intrinsicContentSize" width="110" height="56"/>
+        </designable>
+        <designable name="dPE-sB-ZUl">
+            <size key="intrinsicContentSize" width="113" height="56"/>
+        </designable>
+        <designable name="j8K-Xa-DHV">
+            <size key="intrinsicContentSize" width="137" height="56"/>
+        </designable>
+        <designable name="sBy-X9-ngL">
+            <size key="intrinsicContentSize" width="135" height="56"/>
+        </designable>
+        <designable name="uPt-AC-oai">
+            <size key="intrinsicContentSize" width="101" height="56"/>
+        </designable>
+        <designable name="wJ3-FM-a5Z">
+            <size key="intrinsicContentSize" width="94" height="56"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="button00ElementMenuPayment" width="56" height="56"/>
+        <image name="button00ElementMenuQRcode" width="56" height="56"/>
+        <image name="button00ElementMenuTopUp" width="56" height="56"/>
+        <image name="button00ElementMenuTransfer" width="56" height="56"/>
+        <image name="button00ElementMenuUtility" width="56" height="56"/>
+        <image name="iconEye01On" width="24" height="24"/>
+    </resources>
+</document>

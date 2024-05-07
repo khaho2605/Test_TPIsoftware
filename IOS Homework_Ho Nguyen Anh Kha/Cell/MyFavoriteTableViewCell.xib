@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="194" id="KGk-i7-Jjw" customClass="MyFavoriteTableViewCell" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="613" height="194"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="613" height="194"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Favorite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYH-u7-zgD">
+                        <rect key="frame" x="0.0" y="12.000000000000002" width="135" height="28.666666666666671"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                        <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mF-LY-MZM">
+                        <rect key="frame" x="547" y="14.333333333333336" width="66" height="24"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="More" image="iconArrow01Next">
+                            <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9a-TU-HKK">
+                        <rect key="frame" x="0.0" y="48.666666666666671" width="613" height="145.33333333333331"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qlo-sI-8UD">
+                                <rect key="frame" x="0.0" y="0.0" width="687" height="145"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOP-bB-9rO" customClass="VerticalButton" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="0.0" width="123" height="145"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Bobbyyy…" image="button00ElementScrollBuilding">
+                                            <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjf-1B-d0x" customClass="VerticalButton" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
+                                        <rect key="frame" x="147" y="0.0" width="123" height="145"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Bobbyyy…" image="button00ElementScrollCreditCard">
+                                            <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTC-dN-8f9" customClass="VerticalButton" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
+                                        <rect key="frame" x="282" y="0.0" width="123" height="145"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Bobbyyy…" image="button00ElementScrollMobile">
+                                            <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w65-pX-uUD" customClass="VerticalButton" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
+                                        <rect key="frame" x="417" y="0.0" width="123" height="145"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Bobbyyy…" image="button00ElementScrollTree">
+                                            <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGV-3h-qZW" customClass="VerticalButton" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
+                                        <rect key="frame" x="552" y="0.0" width="123" height="145"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Bobbyyy…" image="button00ElementScrollBuilding">
+                                            <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="w65-pX-uUD" secondAttribute="bottom" id="4C7-Yx-HBH"/>
+                                    <constraint firstItem="oOP-bB-9rO" firstAttribute="top" secondItem="Qlo-sI-8UD" secondAttribute="top" id="AZd-8I-pf8"/>
+                                    <constraint firstItem="BGV-3h-qZW" firstAttribute="top" secondItem="Qlo-sI-8UD" secondAttribute="top" id="Cxk-b6-pO8"/>
+                                    <constraint firstItem="Fjf-1B-d0x" firstAttribute="top" secondItem="Qlo-sI-8UD" secondAttribute="top" id="DVs-HY-56X"/>
+                                    <constraint firstItem="mTC-dN-8f9" firstAttribute="top" secondItem="Qlo-sI-8UD" secondAttribute="top" id="IEE-Sz-3v4"/>
+                                    <constraint firstAttribute="bottom" secondItem="BGV-3h-qZW" secondAttribute="bottom" id="P3s-xi-2Eu"/>
+                                    <constraint firstItem="oOP-bB-9rO" firstAttribute="leading" secondItem="Qlo-sI-8UD" secondAttribute="leading" constant="12" id="VBg-mI-LX8"/>
+                                    <constraint firstItem="mTC-dN-8f9" firstAttribute="leading" secondItem="Fjf-1B-d0x" secondAttribute="trailing" constant="12" id="ZB8-1J-lhU"/>
+                                    <constraint firstAttribute="bottom" secondItem="mTC-dN-8f9" secondAttribute="bottom" id="acb-MV-hhn"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fjf-1B-d0x" secondAttribute="bottom" id="baQ-5J-KhR"/>
+                                    <constraint firstAttribute="trailing" secondItem="BGV-3h-qZW" secondAttribute="trailing" constant="12" id="fmw-Uk-fDj"/>
+                                    <constraint firstItem="w65-pX-uUD" firstAttribute="top" secondItem="Qlo-sI-8UD" secondAttribute="top" id="fp3-C7-MDp"/>
+                                    <constraint firstAttribute="bottom" secondItem="oOP-bB-9rO" secondAttribute="bottom" id="kYp-UN-MBE"/>
+                                    <constraint firstItem="BGV-3h-qZW" firstAttribute="leading" secondItem="w65-pX-uUD" secondAttribute="trailing" constant="12" id="keG-R1-tXT"/>
+                                    <constraint firstItem="w65-pX-uUD" firstAttribute="leading" secondItem="mTC-dN-8f9" secondAttribute="trailing" constant="12" id="q17-Pl-bpC"/>
+                                    <constraint firstItem="Fjf-1B-d0x" firstAttribute="leading" secondItem="oOP-bB-9rO" secondAttribute="trailing" constant="12" id="vU1-rl-8Cx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Qlo-sI-8UD" firstAttribute="leading" secondItem="z9a-TU-HKK" secondAttribute="leading" id="0A9-UO-Agi"/>
+                            <constraint firstItem="Qlo-sI-8UD" firstAttribute="top" secondItem="z9a-TU-HKK" secondAttribute="top" id="88A-BV-x70"/>
+                            <constraint firstItem="Qlo-sI-8UD" firstAttribute="height" secondItem="z9a-TU-HKK" secondAttribute="height" multiplier="0.99878" id="EC7-gJ-SsF"/>
+                            <constraint firstAttribute="trailing" secondItem="Qlo-sI-8UD" secondAttribute="trailing" id="W5R-b9-Jle"/>
+                            <constraint firstAttribute="bottom" secondItem="Qlo-sI-8UD" secondAttribute="bottom" id="qWh-5r-RK7"/>
+                        </constraints>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HYH-u7-zgD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="4Xn-qC-qLD"/>
+                    <constraint firstItem="HYH-u7-zgD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7qM-NB-QOE"/>
+                    <constraint firstAttribute="trailing" secondItem="z9a-TU-HKK" secondAttribute="trailing" id="8BN-fu-hz0"/>
+                    <constraint firstAttribute="trailing" secondItem="3mF-LY-MZM" secondAttribute="trailing" id="8w1-mu-6g6"/>
+                    <constraint firstAttribute="bottom" secondItem="z9a-TU-HKK" secondAttribute="bottom" id="F0k-Ps-l1M"/>
+                    <constraint firstItem="z9a-TU-HKK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XGf-No-ny3"/>
+                    <constraint firstItem="z9a-TU-HKK" firstAttribute="top" secondItem="HYH-u7-zgD" secondAttribute="bottom" constant="8" id="tfD-JY-eTP"/>
+                    <constraint firstItem="3mF-LY-MZM" firstAttribute="centerY" secondItem="HYH-u7-zgD" secondAttribute="centerY" id="yjW-WQ-DjM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="362.59541984732823" y="51.408450704225352"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="BGV-3h-qZW">
+            <size key="intrinsicContentSize" width="123" height="56"/>
+        </designable>
+        <designable name="w65-pX-uUD">
+            <size key="intrinsicContentSize" width="123" height="56"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="button00ElementScrollBuilding" width="56" height="56"/>
+        <image name="button00ElementScrollCreditCard" width="56" height="56"/>
+        <image name="button00ElementScrollMobile" width="56" height="56"/>
+        <image name="button00ElementScrollTree" width="56" height="56"/>
+        <image name="iconArrow01Next" width="24" height="24"/>
+    </resources>
+</document>
