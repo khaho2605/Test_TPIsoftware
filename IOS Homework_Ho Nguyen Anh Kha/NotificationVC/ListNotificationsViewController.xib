@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListNotificationsViewController" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
+            <connections>
+                <outlet property="notiTableView" destination="kNf-OI-ebm" id="6f1-BM-OGp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjF-EB-tjT">
+                    <rect key="frame" x="149" y="59" width="95.333333333333314" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <color key="textColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgU-nh-l4w">
+                    <rect key="frame" x="8" y="49.666666666666657" width="30" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="CA5-OF-6Dl"/>
+                        <constraint firstAttribute="height" constant="40" id="ued-Lb-R4y"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="iconArrowWTailBack"/>
+                    <connections>
+                        <action selector="onTapBackButton:" destination="-1" eventType="touchUpInside" id="EcP-14-I0a"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kNf-OI-ebm">
+                    <rect key="frame" x="20" y="90" width="353" height="728"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="zjF-EB-tjT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="B2p-vT-1Gy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kNf-OI-ebm" secondAttribute="trailing" constant="20" id="EOP-gv-rSd"/>
+                <constraint firstItem="vgU-nh-l4w" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="FNi-mW-fwc"/>
+                <constraint firstItem="kNf-OI-ebm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="LwK-Lh-djh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kNf-OI-ebm" secondAttribute="bottom" id="VK4-FJ-Dvq"/>
+                <constraint firstItem="kNf-OI-ebm" firstAttribute="top" secondItem="zjF-EB-tjT" secondAttribute="bottom" constant="10" id="WVu-8i-tsI"/>
+                <constraint firstItem="zjF-EB-tjT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Wer-Vo-ae4"/>
+                <constraint firstItem="vgU-nh-l4w" firstAttribute="centerY" secondItem="zjF-EB-tjT" secondAttribute="centerY" id="dnO-Cf-w0m"/>
+            </constraints>
+            <point key="canvasLocation" x="-1" y="-1"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconArrowWTailBack" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

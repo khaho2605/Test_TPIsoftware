@@ -1,20 +1,17 @@
 //
-//  TopTableViewCell.swift
+//  NotificationTableViewCell.swift
 //  IOS Homework_Ho Nguyen Anh Kha
 //
-//  Created by Kha on 7/5/24.
+//  Created by Kha on 8/5/24.
 //
 
 import UIKit
 
-class TopTableViewCell: UITableViewCell {
+class NotificationTableViewCell: UITableViewCell {
 
-    var onTapNotiButton: (() -> Void)?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        selectionStyle = .none
+        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,7 +20,4 @@ class TopTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func onTapNotiButton(_ sender: UIButton) {
-        onTapNotiButton?()
-    }
 }

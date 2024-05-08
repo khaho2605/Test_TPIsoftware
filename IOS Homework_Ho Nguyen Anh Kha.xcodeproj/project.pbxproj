@@ -22,6 +22,11 @@
 		EA01311C2BEA7E22007B14C0 /* VerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA01311B2BEA7E22007B14C0 /* VerticalButton.swift */; };
 		EA01311F2BEA82FC007B14C0 /* TopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA01311D2BEA82FC007B14C0 /* TopTableViewCell.swift */; };
 		EA0131202BEA82FC007B14C0 /* TopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA01311E2BEA82FC007B14C0 /* TopTableViewCell.xib */; };
+		EAE15CD32BEB1B5200BA9F55 /* ListNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE15CD12BEB1B5200BA9F55 /* ListNotificationsViewController.swift */; };
+		EAE15CD42BEB1B5200BA9F55 /* ListNotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE15CD22BEB1B5200BA9F55 /* ListNotificationsViewController.xib */; };
+		EAE15CD82BEB1F0900BA9F55 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE15CD62BEB1F0900BA9F55 /* NotificationTableViewCell.swift */; };
+		EAE15CD92BEB1F0900BA9F55 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE15CD72BEB1F0900BA9F55 /* NotificationTableViewCell.xib */; };
+		EAE15CDB2BEB1F7400BA9F55 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE15CDA2BEB1F7400BA9F55 /* UIView-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		EA01311B2BEA7E22007B14C0 /* VerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalButton.swift; sourceTree = "<group>"; };
 		EA01311D2BEA82FC007B14C0 /* TopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableViewCell.swift; sourceTree = "<group>"; };
 		EA01311E2BEA82FC007B14C0 /* TopTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopTableViewCell.xib; sourceTree = "<group>"; };
+		EAE15CD12BEB1B5200BA9F55 /* ListNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNotificationsViewController.swift; sourceTree = "<group>"; };
+		EAE15CD22BEB1B5200BA9F55 /* ListNotificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListNotificationsViewController.xib; sourceTree = "<group>"; };
+		EAE15CD62BEB1F0900BA9F55 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		EAE15CD72BEB1F0900BA9F55 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
+		EAE15CDA2BEB1F7400BA9F55 /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +87,9 @@
 				EA0130F52BEA0BB7007B14C0 /* AppDelegate.swift */,
 				EA0130F72BEA0BB7007B14C0 /* SceneDelegate.swift */,
 				EA0130F92BEA0BB7007B14C0 /* HomeViewController.swift */,
-				EA01311B2BEA7E22007B14C0 /* VerticalButton.swift */,
 				EA01310E2BEA7A24007B14C0 /* Cell */,
+				EAE15CCF2BEB1AF500BA9F55 /* Helper */,
+				EAE15CD02BEB1B1C00BA9F55 /* NotificationVC */,
 				EA0130FB2BEA0BB7007B14C0 /* Main.storyboard */,
 				EA0130FE2BEA0BB8007B14C0 /* Assets.xcassets */,
 				EA0131002BEA0BB8007B14C0 /* LaunchScreen.storyboard */,
@@ -100,6 +111,34 @@
 				EA0131182BEA7AEC007B14C0 /* AdTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		EAE15CCF2BEB1AF500BA9F55 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EA01311B2BEA7E22007B14C0 /* VerticalButton.swift */,
+				EAE15CDA2BEB1F7400BA9F55 /* UIView-Extension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		EAE15CD02BEB1B1C00BA9F55 /* NotificationVC */ = {
+			isa = PBXGroup;
+			children = (
+				EAE15CD52BEB1EED00BA9F55 /* NotiCell */,
+				EAE15CD12BEB1B5200BA9F55 /* ListNotificationsViewController.swift */,
+				EAE15CD22BEB1B5200BA9F55 /* ListNotificationsViewController.xib */,
+			);
+			path = NotificationVC;
+			sourceTree = "<group>";
+		};
+		EAE15CD52BEB1EED00BA9F55 /* NotiCell */ = {
+			isa = PBXGroup;
+			children = (
+				EAE15CD62BEB1F0900BA9F55 /* NotificationTableViewCell.swift */,
+				EAE15CD72BEB1F0900BA9F55 /* NotificationTableViewCell.xib */,
+			);
+			path = NotiCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,12 +200,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA0131202BEA82FC007B14C0 /* TopTableViewCell.xib in Resources */,
+				EAE15CD42BEB1B5200BA9F55 /* ListNotificationsViewController.xib in Resources */,
 				EA0131162BEA7AB1007B14C0 /* MyFavoriteTableViewCell.xib in Resources */,
 				EA0130FF2BEA0BB8007B14C0 /* Assets.xcassets in Resources */,
 				EA01311A2BEA7AEC007B14C0 /* AdTableViewCell.xib in Resources */,
 				EA0131022BEA0BB8007B14C0 /* Base in Resources */,
 				EA0131122BEA7A40007B14C0 /* BalanceTableViewCell.xib in Resources */,
 				EA0130FD2BEA0BB7007B14C0 /* Base in Resources */,
+				EAE15CD92BEB1F0900BA9F55 /* NotificationTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,11 +218,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE15CD32BEB1B5200BA9F55 /* ListNotificationsViewController.swift in Sources */,
+				EAE15CDB2BEB1F7400BA9F55 /* UIView-Extension.swift in Sources */,
 				EA0131192BEA7AEC007B14C0 /* AdTableViewCell.swift in Sources */,
 				EA0131152BEA7AB1007B14C0 /* MyFavoriteTableViewCell.swift in Sources */,
 				EA01311C2BEA7E22007B14C0 /* VerticalButton.swift in Sources */,
 				EA0130FA2BEA0BB7007B14C0 /* HomeViewController.swift in Sources */,
 				EA0131112BEA7A40007B14C0 /* BalanceTableViewCell.swift in Sources */,
+				EAE15CD82BEB1F0900BA9F55 /* NotificationTableViewCell.swift in Sources */,
 				EA0130F62BEA0BB7007B14C0 /* AppDelegate.swift in Sources */,
 				EA0130F82BEA0BB7007B14C0 /* SceneDelegate.swift in Sources */,
 				EA01311F2BEA82FC007B14C0 /* TopTableViewCell.swift in Sources */,
@@ -341,8 +385,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -373,8 +417,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
