@@ -33,10 +33,13 @@ class HomeViewController: UIViewController {
 //MARK: - Helper
 extension HomeViewController {
     private func callAPI() {
-        viewModel.getListNoti()
         viewModel.getAdBanner(completion: { [weak self] isSuccess in
             guard let self = self else { return }
-            self.tableView.reloadData()
+            if isSuccess {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
         })
     }
     
@@ -53,7 +56,7 @@ extension HomeViewController {
     }
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-        self.tableView.reloadData()
+//        self.tableView.reloadData()
         refreshControl.endRefreshing()
     }
 }

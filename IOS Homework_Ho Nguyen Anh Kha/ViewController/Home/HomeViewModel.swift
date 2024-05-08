@@ -6,34 +6,26 @@
 //
 
 import Foundation
-import Alamofire
 
-class HomeViewModel {
+final class HomeViewModel {
     var listAdBanner: [AdBanner] = [AdBanner]()
     
-    func getListNoti() {
-        AF.request("https://willywu0201.github.io/data/notificationList.json")
-            .responseDecodable(of: ListNotificationResponse.self) { (response) in
-            switch response.result {
-            case .success(let data):
-                print(data.result.messages.count)
-            case .failure(let err):
-                print(err.localizedDescription)
-            }
-        }
-    }
-    
     func getAdBanner(completion:((_ result: Bool) -> Void)?) {
-        AF.request("https://willywu0201.github.io/data/banner.json")
-            .responseDecodable(of: AdBannerResponse.self) { (response) in
-            switch response.result {
-            case .success(let data):
-                self.listAdBanner = data.result.bannerList
+        Task {
+            do {
+                guard let url = URL(string: "https://willywu0201.github.io/data/banner.json")
+                else {
+                    completion?(false)
+                    return
+                }
+                let response: AdBannerResponse = try await fetchAPI(url: url)
+                self.listAdBanner = response.result.bannerList
                 completion?(true)
-            case .failure(let err):
-                print(err.localizedDescription)
+            }
+            catch {
+                print(error.localizedDescription)
                 completion?(false)
             }
         }
-    }
+    }   
 }

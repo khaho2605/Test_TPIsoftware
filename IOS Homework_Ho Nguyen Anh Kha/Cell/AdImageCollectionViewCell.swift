@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class AdImageCollectionViewCell: UICollectionViewCell {
 
@@ -18,7 +17,6 @@ class AdImageCollectionViewCell: UICollectionViewCell {
     }
 
     func updateImage(with strURL: String) {
-        let url = URL(string: "https://willywu0201.github.io/data/banner1.jpg")
-        adImageView.kf.setImage(with: url)
+        adImageView.load(urlString: strURL)
     }
 }

@@ -9,6 +9,11 @@ import UIKit
 
 class NotificationTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var newView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateTimeLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +25,10 @@ class NotificationTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func updateUI(noti: Notification) {
+        newView.isHidden = noti.status
+        titleLabel.text = noti.title
+        dateTimeLabel.text = noti.updateDateTime
+        messageLabel.text = noti.message
+    }
 }
