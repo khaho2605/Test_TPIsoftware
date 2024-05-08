@@ -12,6 +12,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var viewModel = HomeViewModel()
+    private var notiViewModel = NotificationViewModel()
+    
     private lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action:
@@ -41,6 +43,8 @@ extension HomeViewController {
                 }
             }
         })
+        
+        viewModel.getAAAA()
     }
     
     private func setupTableView() {
