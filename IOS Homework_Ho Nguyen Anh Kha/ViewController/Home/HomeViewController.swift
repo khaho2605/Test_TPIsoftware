@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private var viewModel = HomeViewModel()
     private lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action:
@@ -23,6 +24,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        callAPI()
         setupTableView()
     }
 
@@ -30,6 +32,14 @@ class HomeViewController: UIViewController {
 
 //MARK: - Helper
 extension HomeViewController {
+    private func callAPI() {
+        viewModel.getListNoti()
+        viewModel.getAdBanner(completion: { [weak self] isSuccess in
+            guard let self = self else { return }
+            self.tableView.reloadData()
+        })
+    }
+    
     private func setupTableView() {
         tableView.separatorStyle = .none
         tableView.delegate = self
@@ -73,6 +83,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as! AdTableViewCell
+            cell.updateUI(with: viewModel.listAdBanner)
             return cell
         default:
             return UITableViewCell()

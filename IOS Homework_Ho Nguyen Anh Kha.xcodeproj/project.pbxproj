@@ -27,6 +27,17 @@
 		EAE15CD82BEB1F0900BA9F55 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE15CD62BEB1F0900BA9F55 /* NotificationTableViewCell.swift */; };
 		EAE15CD92BEB1F0900BA9F55 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE15CD72BEB1F0900BA9F55 /* NotificationTableViewCell.xib */; };
 		EAE15CDB2BEB1F7400BA9F55 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE15CDA2BEB1F7400BA9F55 /* UIView-Extension.swift */; };
+		EAE15CDF2BEB279400BA9F55 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE15CDE2BEB279400BA9F55 /* HomeViewModel.swift */; };
+		EAE15CE22BEB292000BA9F55 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EAE15CE12BEB292000BA9F55 /* Alamofire */; };
+		EAE15CE42BEB292000BA9F55 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = EAE15CE32BEB292000BA9F55 /* AlamofireDynamic */; };
+		EAE15CE72BEB2BC500BA9F55 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE15CE62BEB2BC500BA9F55 /* Notification.swift */; };
+		EAE15CE92BEB2F5B00BA9F55 /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE15CE82BEB2F5B00BA9F55 /* Saving.swift */; };
+		EAE15CEB2BEB308100BA9F55 /* FixedDeposited.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE15CEA2BEB308100BA9F55 /* FixedDeposited.swift */; };
+		EAE15CED2BEB312C00BA9F55 /* Digital.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE15CEC2BEB312C00BA9F55 /* Digital.swift */; };
+		EAE15CF02BEB325100BA9F55 /* AdBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE15CEF2BEB325100BA9F55 /* AdBanner.swift */; };
+		EAE15CF32BEB35E100BA9F55 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EAE15CF22BEB35E100BA9F55 /* Kingfisher */; };
+		EAE15CF62BEB37D700BA9F55 /* AdImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE15CF42BEB37D700BA9F55 /* AdImageCollectionViewCell.swift */; };
+		EAE15CF72BEB37D700BA9F55 /* AdImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE15CF52BEB37D700BA9F55 /* AdImageCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +63,14 @@
 		EAE15CD62BEB1F0900BA9F55 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		EAE15CD72BEB1F0900BA9F55 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		EAE15CDA2BEB1F7400BA9F55 /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
+		EAE15CDE2BEB279400BA9F55 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EAE15CE62BEB2BC500BA9F55 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		EAE15CE82BEB2F5B00BA9F55 /* Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
+		EAE15CEA2BEB308100BA9F55 /* FixedDeposited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedDeposited.swift; sourceTree = "<group>"; };
+		EAE15CEC2BEB312C00BA9F55 /* Digital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digital.swift; sourceTree = "<group>"; };
+		EAE15CEF2BEB325100BA9F55 /* AdBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBanner.swift; sourceTree = "<group>"; };
+		EAE15CF42BEB37D700BA9F55 /* AdImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		EAE15CF52BEB37D700BA9F55 /* AdImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdImageCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE15CF32BEB35E100BA9F55 /* Kingfisher in Frameworks */,
+				EAE15CE22BEB292000BA9F55 /* Alamofire in Frameworks */,
+				EAE15CE42BEB292000BA9F55 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,10 +108,10 @@
 			children = (
 				EA0130F52BEA0BB7007B14C0 /* AppDelegate.swift */,
 				EA0130F72BEA0BB7007B14C0 /* SceneDelegate.swift */,
-				EA0130F92BEA0BB7007B14C0 /* HomeViewController.swift */,
+				EAE15CE52BEB2B9F00BA9F55 /* Model */,
 				EA01310E2BEA7A24007B14C0 /* Cell */,
 				EAE15CCF2BEB1AF500BA9F55 /* Helper */,
-				EAE15CD02BEB1B1C00BA9F55 /* NotificationVC */,
+				EAE15CDC2BEB276900BA9F55 /* ViewController */,
 				EA0130FB2BEA0BB7007B14C0 /* Main.storyboard */,
 				EA0130FE2BEA0BB8007B14C0 /* Assets.xcassets */,
 				EA0131002BEA0BB8007B14C0 /* LaunchScreen.storyboard */,
@@ -109,6 +131,8 @@
 				EA0131142BEA7AB1007B14C0 /* MyFavoriteTableViewCell.xib */,
 				EA0131172BEA7AEC007B14C0 /* AdTableViewCell.swift */,
 				EA0131182BEA7AEC007B14C0 /* AdTableViewCell.xib */,
+				EAE15CF42BEB37D700BA9F55 /* AdImageCollectionViewCell.swift */,
+				EAE15CF52BEB37D700BA9F55 /* AdImageCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -122,14 +146,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		EAE15CD02BEB1B1C00BA9F55 /* NotificationVC */ = {
+		EAE15CD02BEB1B1C00BA9F55 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
 				EAE15CD52BEB1EED00BA9F55 /* NotiCell */,
 				EAE15CD12BEB1B5200BA9F55 /* ListNotificationsViewController.swift */,
 				EAE15CD22BEB1B5200BA9F55 /* ListNotificationsViewController.xib */,
 			);
-			path = NotificationVC;
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		EAE15CD52BEB1EED00BA9F55 /* NotiCell */ = {
@@ -139,6 +163,44 @@
 				EAE15CD72BEB1F0900BA9F55 /* NotificationTableViewCell.xib */,
 			);
 			path = NotiCell;
+			sourceTree = "<group>";
+		};
+		EAE15CDC2BEB276900BA9F55 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EAE15CDD2BEB277E00BA9F55 /* Home */,
+				EAE15CD02BEB1B1C00BA9F55 /* Notification */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EAE15CDD2BEB277E00BA9F55 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EAE15CDE2BEB279400BA9F55 /* HomeViewModel.swift */,
+				EA0130F92BEA0BB7007B14C0 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EAE15CE52BEB2B9F00BA9F55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EAE15CEE2BEB31E100BA9F55 /* Amount */,
+				EAE15CE62BEB2BC500BA9F55 /* Notification.swift */,
+				EAE15CEF2BEB325100BA9F55 /* AdBanner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EAE15CEE2BEB31E100BA9F55 /* Amount */ = {
+			isa = PBXGroup;
+			children = (
+				EAE15CE82BEB2F5B00BA9F55 /* Saving.swift */,
+				EAE15CEA2BEB308100BA9F55 /* FixedDeposited.swift */,
+				EAE15CEC2BEB312C00BA9F55 /* Digital.swift */,
+			);
+			path = Amount;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +219,11 @@
 			dependencies = (
 			);
 			name = "IOS Homework_Ho Nguyen Anh Kha";
+			packageProductDependencies = (
+				EAE15CE12BEB292000BA9F55 /* Alamofire */,
+				EAE15CE32BEB292000BA9F55 /* AlamofireDynamic */,
+				EAE15CF22BEB35E100BA9F55 /* Kingfisher */,
+			);
 			productName = "IOS Homework_Ho Nguyen Anh Kha";
 			productReference = EA0130F22BEA0BB7007B14C0 /* IOS Homework_Ho Nguyen Anh Kha.app */;
 			productType = "com.apple.product-type.application";
@@ -185,6 +252,10 @@
 				Base,
 			);
 			mainGroup = EA0130E92BEA0BB7007B14C0;
+			packageReferences = (
+				EAE15CE02BEB292000BA9F55 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				EAE15CF12BEB35E100BA9F55 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = EA0130F32BEA0BB7007B14C0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -204,6 +275,7 @@
 				EA0131162BEA7AB1007B14C0 /* MyFavoriteTableViewCell.xib in Resources */,
 				EA0130FF2BEA0BB8007B14C0 /* Assets.xcassets in Resources */,
 				EA01311A2BEA7AEC007B14C0 /* AdTableViewCell.xib in Resources */,
+				EAE15CF72BEB37D700BA9F55 /* AdImageCollectionViewCell.xib in Resources */,
 				EA0131022BEA0BB8007B14C0 /* Base in Resources */,
 				EA0131122BEA7A40007B14C0 /* BalanceTableViewCell.xib in Resources */,
 				EA0130FD2BEA0BB7007B14C0 /* Base in Resources */,
@@ -223,10 +295,17 @@
 				EA0131192BEA7AEC007B14C0 /* AdTableViewCell.swift in Sources */,
 				EA0131152BEA7AB1007B14C0 /* MyFavoriteTableViewCell.swift in Sources */,
 				EA01311C2BEA7E22007B14C0 /* VerticalButton.swift in Sources */,
+				EAE15CF62BEB37D700BA9F55 /* AdImageCollectionViewCell.swift in Sources */,
+				EAE15CF02BEB325100BA9F55 /* AdBanner.swift in Sources */,
 				EA0130FA2BEA0BB7007B14C0 /* HomeViewController.swift in Sources */,
+				EAE15CED2BEB312C00BA9F55 /* Digital.swift in Sources */,
 				EA0131112BEA7A40007B14C0 /* BalanceTableViewCell.swift in Sources */,
+				EAE15CE72BEB2BC500BA9F55 /* Notification.swift in Sources */,
+				EAE15CDF2BEB279400BA9F55 /* HomeViewModel.swift in Sources */,
 				EAE15CD82BEB1F0900BA9F55 /* NotificationTableViewCell.swift in Sources */,
 				EA0130F62BEA0BB7007B14C0 /* AppDelegate.swift in Sources */,
+				EAE15CE92BEB2F5B00BA9F55 /* Saving.swift in Sources */,
+				EAE15CEB2BEB308100BA9F55 /* FixedDeposited.swift in Sources */,
 				EA0130F82BEA0BB7007B14C0 /* SceneDelegate.swift in Sources */,
 				EA01311F2BEA82FC007B14C0 /* TopTableViewCell.swift in Sources */,
 			);
@@ -459,6 +538,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EAE15CE02BEB292000BA9F55 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		EAE15CF12BEB35E100BA9F55 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EAE15CE12BEB292000BA9F55 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EAE15CE02BEB292000BA9F55 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		EAE15CE32BEB292000BA9F55 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EAE15CE02BEB292000BA9F55 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		EAE15CF22BEB35E100BA9F55 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EAE15CF12BEB35E100BA9F55 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA0130EA2BEA0BB7007B14C0 /* Project object */;
 }
