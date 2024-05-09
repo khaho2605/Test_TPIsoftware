@@ -12,8 +12,10 @@ extension Double {
     /// Number formatter that adds separators for thousands (eg. 1,234.01).
     private static var numberFormatter: NumberFormatter = {
         let numberFormatter = NumberFormatter()
+        numberFormatter.locale = Locale(identifier: "en_US")
         numberFormatter.numberStyle = .decimal // this style adds thousand separators.
         numberFormatter.groupingSeparator = ","
+        numberFormatter.minimumFractionDigits = 2
         return numberFormatter
     }()
 
