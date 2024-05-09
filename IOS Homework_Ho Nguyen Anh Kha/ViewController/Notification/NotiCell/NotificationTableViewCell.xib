@@ -64,6 +64,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="dateTimeLabel" destination="Wqo-qv-ppk" id="wIQ-kh-GCg"/>
                 <outlet property="messageLabel" destination="0w0-DV-HbX" id="g9O-kK-mQR"/>

@@ -5,12 +5,12 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListNotificationsViewController" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
             <connections>
+                <outlet property="emptyStackView" destination="ne0-Nk-Ryc" id="9Ov-fH-XrF"/>
                 <outlet property="notiTableView" destination="kNf-OI-ebm" id="6f1-BM-OGp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,13 +21,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjF-EB-tjT">
-                    <rect key="frame" x="149" y="59" width="95.333333333333314" height="21"/>
+                    <rect key="frame" x="149" y="58.999999999999993" width="95.333333333333314" height="21.666666666666664"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                     <color key="textColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgU-nh-l4w">
-                    <rect key="frame" x="8" y="49.666666666666657" width="30" height="40"/>
+                    <rect key="frame" x="8" y="50" width="30" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="CA5-OF-6Dl"/>
                         <constraint firstAttribute="height" constant="40" id="ued-Lb-R4y"/>
@@ -39,29 +39,48 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kNf-OI-ebm">
-                    <rect key="frame" x="20" y="90" width="353" height="728"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="20" y="90.666666666666686" width="353" height="727.33333333333326"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ne0-Nk-Ryc">
+                    <rect key="frame" x="136.33333333333334" y="393.33333333333331" width="120.66666666666666" height="65.666666666666686"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Osx-gV-Cia">
+                            <rect key="frame" x="40.333333333333314" y="0.33333333333333215" width="40" height="39.333333333333343"/>
+                            <color key="tintColor" red="0.43529411759999997" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="9xl-nZ-XIl"/>
+                                <constraint firstAttribute="width" constant="40" id="cYq-FV-ted"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No notification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLl-UO-fbf">
+                            <rect key="frame" x="0.0" y="44" width="120.66666666666667" height="21.666666666666671"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <color key="textColor" red="0.43529411759999997" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="zjF-EB-tjT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="B2p-vT-1Gy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kNf-OI-ebm" secondAttribute="trailing" constant="20" id="EOP-gv-rSd"/>
                 <constraint firstItem="vgU-nh-l4w" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="FNi-mW-fwc"/>
                 <constraint firstItem="kNf-OI-ebm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="LwK-Lh-djh"/>
+                <constraint firstItem="ne0-Nk-Ryc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="TL5-NW-LWd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kNf-OI-ebm" secondAttribute="bottom" id="VK4-FJ-Dvq"/>
                 <constraint firstItem="kNf-OI-ebm" firstAttribute="top" secondItem="zjF-EB-tjT" secondAttribute="bottom" constant="10" id="WVu-8i-tsI"/>
                 <constraint firstItem="zjF-EB-tjT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Wer-Vo-ae4"/>
+                <constraint firstItem="ne0-Nk-Ryc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="brT-RJ-bd4"/>
                 <constraint firstItem="vgU-nh-l4w" firstAttribute="centerY" secondItem="zjF-EB-tjT" secondAttribute="centerY" id="dnO-Cf-w0m"/>
             </constraints>
             <point key="canvasLocation" x="-1" y="-1"/>
         </view>
     </objects>
     <resources>
+        <image name="bell.fill" catalog="system" width="123" height="128"/>
         <image name="iconArrowWTailBack" width="24" height="24"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

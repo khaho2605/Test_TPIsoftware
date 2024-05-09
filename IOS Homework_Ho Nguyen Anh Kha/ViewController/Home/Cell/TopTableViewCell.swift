@@ -29,7 +29,7 @@ final class TopTableViewCell: UITableViewCell {
         onTapNotiButton?()
     }
     
-    func updateBadgeNoti() {
-        notiButton.isSelected = true
+    func updateBadgeNoti(with list: [Notification]) {
+        notiButton.isSelected = !list.isEmpty
     }
 }

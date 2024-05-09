@@ -36,17 +36,15 @@ final class HomeViewController: BaseViewController {
 
 //MARK: - Helper
 extension HomeViewController {
-    private func showLoading() {
-        loadingVC.view.backgroundColor = .black
-        loadingVC.modalPresentationStyle = .overCurrentContext
-
-        // Animate loadingVC with a fade in animation
-        loadingVC.modalTransitionStyle = .crossDissolve
-               
-        present(loadingVC, animated: true, completion: nil)
-    }
     private func callAPI() {
         self.loadingView.isHidden = false
+        notiViewModel.getListNoti(isEmpty: true) { [weak self] _ in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.topCell.updateBadgeNoti(with: self.notiViewModel.listNotification)
+            }
+        }
+        
         homeViewModel.getAdBanner(completion: { [weak self] isSuccess in
             guard let self = self else { return }
             if isSuccess {
@@ -90,7 +88,7 @@ extension HomeViewController {
             guard let self = self else { return }
             if isSuccess {
                 DispatchQueue.main.async {
-                    self.topCell.updateBadgeNoti()
+                    self.topCell.updateBadgeNoti(with: self.notiViewModel.listNotification)
                 }
             }
         }
@@ -133,7 +131,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             topCell = cell
             cell.onTapNotiButton = { [weak self] in
                 guard let self = self else { return }
-                let notiVC = ListNotificationsViewController()
+                let notiVC = ListNotificationsViewController(listNoti: notiViewModel.listNotification)
                 self.navigationController?.pushViewController(notiVC, animated: true)
             }
             return cell

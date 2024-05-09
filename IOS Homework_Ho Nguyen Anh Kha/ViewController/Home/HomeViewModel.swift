@@ -16,7 +16,7 @@ final class HomeViewModel {
     func getAdBanner(completion:((_ result: Bool) -> Void)?) {
         Task {
             do {
-                guard let url = URL(string: "https://willywu0201.github.io/data/banner.json")
+                guard let url = URL(string: "\(APIManager.baseURL)/banner.json")
                 else {
                     completion?(false)
                     return
@@ -43,7 +43,7 @@ final class HomeViewModel {
     func getListFavarite(completion:((_ result: Bool) -> Void)?) {
         Task {
             do {
-                guard let url = URL(string: "https://willywu0201.github.io/data/favoriteList.json")
+                guard let url = URL(string: "\(APIManager.baseURL)/favoriteList.json")
                 else {
                     completion?(false)
                     return
@@ -64,9 +64,9 @@ final class HomeViewModel {
 // MARK: - Private function
 extension HomeViewModel {
     private func getAmount(with symbol: String) async -> Double {
-       let urlSaving = URL(string: "https://willywu0201.github.io/data/\(symbol)Savings1.json")!
-       let urlFixed = URL(string: "https://willywu0201.github.io/data/\(symbol)Fixed1.json")!
-       let urlDigital = URL(string: "https://willywu0201.github.io/data/\(symbol)Digital1.json")!
+       let urlSaving = URL(string: "\(APIManager.baseURL)/\(symbol)Savings1.json")!
+       let urlFixed = URL(string: "\(APIManager.baseURL)/\(symbol)Fixed1.json")!
+       let urlDigital = URL(string: "\(APIManager.baseURL)/\(symbol)Digital1.json")!
        
        do {
            var listBalance: [Balance] = [Balance]()

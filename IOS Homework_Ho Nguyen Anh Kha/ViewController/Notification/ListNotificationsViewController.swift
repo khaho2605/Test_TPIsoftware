@@ -9,15 +9,27 @@ import UIKit
 
 final class ListNotificationsViewController: BaseViewController {
 
+    @IBOutlet weak var emptyStackView: UIStackView!
     @IBOutlet weak var notiTableView: UITableView!
     
-    private var viewModel = NotificationViewModel()
+    private var listNotification = [Notification]()
+    
+    init(listNoti: [Notification]) {
+        self.listNotification = listNoti
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTableView()
-        getListNoti()
+        emptyStackView.isHidden = !listNotification.isEmpty
+        notiTableView.isHidden = listNotification.isEmpty
+
     }
    
     @IBAction func onTapBackButton(_ sender: Any) {
@@ -28,16 +40,6 @@ final class ListNotificationsViewController: BaseViewController {
 
 //MARK: - Helper function
 extension ListNotificationsViewController {
-    private func getListNoti() {
-        viewModel.getListNoti { [weak self] isSuccess in
-            guard let self = self else { return }
-            if isSuccess {
-                DispatchQueue.main.async {
-                    self.notiTableView.reloadData()
-                }
-            }
-        }
-    }
     private func setupTableView() {
         notiTableView.delegate = self
         notiTableView.dataSource = self
@@ -48,12 +50,12 @@ extension ListNotificationsViewController {
 //MARK: - UITableViewDelegate, UITableViewDataSource
 extension ListNotificationsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.listNotification.count
+        return listNotification.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationTableViewCell", for: indexPath) as! NotificationTableViewCell
-        cell.updateUI(noti: viewModel.listNotification[indexPath.row])
+        cell.updateUI(noti: listNotification[indexPath.row])
         return cell
     }
     

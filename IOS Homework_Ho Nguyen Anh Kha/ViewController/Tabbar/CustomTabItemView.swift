@@ -21,6 +21,7 @@ class CustomTabItemView: UIView {
     
     private lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
@@ -78,11 +79,11 @@ class CustomTabItemView: UIView {
     }
     
     private func animateItems() {
-        UIView.animate(withDuration: 0.4) { [unowned self] in
+        UIView.animate(withDuration: 0.3) { [unowned self] in
             self.nameLabel.textColor = self.isSelected ? UIColor.orange : UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
         }
         UIView.transition(with: iconImageView,
-                          duration: 0.4,
+                          duration: 0.3,
                           options: .transitionCrossDissolve) { [unowned self] in
             self.iconImageView.image = self.isSelected ? self.item.selectedIcon : self.item.icon
         }

@@ -36,6 +36,7 @@
 		EA06C38D2BECE88E009934E7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C38C2BECE88E009934E7 /* BaseViewController.swift */; };
 		EA06C3912BECE987009934E7 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA06C3902BECE987009934E7 /* HomeViewController.xib */; };
 		EA06C3922BECE987009934E7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C38F2BECE987009934E7 /* HomeViewController.swift */; };
+		EA06C3942BED16DE009934E7 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C3932BED16DE009934E7 /* APIManager.swift */; };
 		EA1FB9752BEC7083000CFC9F /* Double-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FB9742BEC7083000CFC9F /* Double-Extension.swift */; };
 		EA1FB9772BEC7E14000CFC9F /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FB9762BEC7E14000CFC9F /* Favorite.swift */; };
 		EA1FB97A2BEC832B000CFC9F /* FavoriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1FB9792BEC832B000CFC9F /* FavoriteCollectionViewCell.xib */; };
@@ -91,6 +92,7 @@
 		EA06C38C2BECE88E009934E7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EA06C38F2BECE987009934E7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EA06C3902BECE987009934E7 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		EA06C3932BED16DE009934E7 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		EA1FB9742BEC7083000CFC9F /* Double-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double-Extension.swift"; sourceTree = "<group>"; };
 		EA1FB9762BEC7E14000CFC9F /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		EA1FB9782BEC832B000CFC9F /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 			children = (
 				EAE15CFD2BEBCE1A00BA9F55 /* API.swift */,
 				EAE15CFF2BEBCE5700BA9F55 /* APIError.swift */,
+				EA06C3932BED16DE009934E7 /* APIManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				EAE15CD82BEB1F0900BA9F55 /* NotificationTableViewCell.swift in Sources */,
 				EA0130F62BEA0BB7007B14C0 /* AppDelegate.swift in Sources */,
 				EAE15CE92BEB2F5B00BA9F55 /* Saving.swift in Sources */,
+				EA06C3942BED16DE009934E7 /* APIManager.swift in Sources */,
 				EAE15CEB2BEB308100BA9F55 /* FixedDeposited.swift in Sources */,
 				EA0130F82BEA0BB7007B14C0 /* SceneDelegate.swift in Sources */,
 				EA01311F2BEA82FC007B14C0 /* TopTableViewCell.swift in Sources */,
