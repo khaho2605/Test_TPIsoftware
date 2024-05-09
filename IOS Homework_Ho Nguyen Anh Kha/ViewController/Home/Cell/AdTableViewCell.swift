@@ -13,7 +13,7 @@ class AdTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     //Timer for auto change ad image
-    private var timer: Timer?
+    private var myTimer: Timer?
     private var currentIndex: Int = 0
     private let timeInterval: Double = 3
     
@@ -24,7 +24,6 @@ class AdTableViewCell: UITableViewCell {
         
         selectionStyle = .none
         setupCollectionView()
-//        timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(scrollNext), userInfo: nil, repeats: true)
     }
     
     func updateUI(with listAdBanner: [AdBanner]) {
@@ -32,6 +31,17 @@ class AdTableViewCell: UITableViewCell {
         pageControl.numberOfPages = adBanners.count
         if adBanners.count > 0 {
             collectionView.reloadData()
+            startTimer()
+        }
+    }
+    
+    private func startTimer() {
+        if let timer = myTimer {
+            myTimer?.invalidate()
+            myTimer = nil
+            myTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(scrollNext), userInfo: nil, repeats: true)
+        } else {
+            myTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(scrollNext), userInfo: nil, repeats: true)
         }
     }
     

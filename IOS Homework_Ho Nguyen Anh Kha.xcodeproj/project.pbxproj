@@ -281,10 +281,10 @@
 		EAE15CDD2BEB277E00BA9F55 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EA01310E2BEA7A24007B14C0 /* Cell */,
 				EAE15CDE2BEB279400BA9F55 /* HomeViewModel.swift */,
 				EA06C38F2BECE987009934E7 /* HomeViewController.swift */,
 				EA06C3902BECE987009934E7 /* HomeViewController.xib */,
-				EA01310E2BEA7A24007B14C0 /* Cell */,
 			);
 			path = Home;
 			sourceTree = "<group>";
