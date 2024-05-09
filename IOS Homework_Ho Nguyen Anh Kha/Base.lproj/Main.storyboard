@@ -17,22 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YLb-ya-B64">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YLb-ya-B64">
                                 <rect key="frame" x="24" y="59" width="345" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfl-Wd-n4S" customClass="LoadingView" customModule="IOS_Homework_Ho_Nguyen_Anh_Kha" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Cfl-Wd-n4S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5ea-8Y-N2X"/>
+                            <constraint firstAttribute="bottom" secondItem="Cfl-Wd-n4S" secondAttribute="bottom" id="MWw-WA-8Pu"/>
                             <constraint firstItem="YLb-ya-B64" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="VaP-7w-V5H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YLb-ya-B64" secondAttribute="bottom" id="YQO-51-Rag"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YLb-ya-B64" secondAttribute="trailing" constant="24" id="Yle-OY-IJh"/>
+                            <constraint firstItem="Cfl-Wd-n4S" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="frI-fj-0a7"/>
                             <constraint firstItem="YLb-ya-B64" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="p4O-FK-QxR"/>
+                            <constraint firstItem="Cfl-Wd-n4S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yeF-0A-WZ1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tqX-Nr-5hw"/>
                     <connections>
+                        <outlet property="loadingView" destination="Cfl-Wd-n4S" id="z4a-Mv-cpO"/>
                         <outlet property="tableView" destination="YLb-ya-B64" id="l0L-CX-RaM"/>
                     </connections>
                 </viewController>

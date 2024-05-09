@@ -22,6 +22,8 @@
 		EA01311C2BEA7E22007B14C0 /* VerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA01311B2BEA7E22007B14C0 /* VerticalButton.swift */; };
 		EA01311F2BEA82FC007B14C0 /* TopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA01311D2BEA82FC007B14C0 /* TopTableViewCell.swift */; };
 		EA0131202BEA82FC007B14C0 /* TopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA01311E2BEA82FC007B14C0 /* TopTableViewCell.xib */; };
+		EA06C36A2BECBA68009934E7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C3692BECBA68009934E7 /* LoadingView.swift */; };
+		EA06C36C2BECBA73009934E7 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA06C36B2BECBA73009934E7 /* LoadingView.xib */; };
 		EA1FB9752BEC7083000CFC9F /* Double-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FB9742BEC7083000CFC9F /* Double-Extension.swift */; };
 		EA1FB9772BEC7E14000CFC9F /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FB9762BEC7E14000CFC9F /* Favorite.swift */; };
 		EA1FB97A2BEC832B000CFC9F /* FavoriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1FB9792BEC832B000CFC9F /* FavoriteCollectionViewCell.xib */; };
@@ -63,6 +65,8 @@
 		EA01311B2BEA7E22007B14C0 /* VerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalButton.swift; sourceTree = "<group>"; };
 		EA01311D2BEA82FC007B14C0 /* TopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableViewCell.swift; sourceTree = "<group>"; };
 		EA01311E2BEA82FC007B14C0 /* TopTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopTableViewCell.xib; sourceTree = "<group>"; };
+		EA06C3692BECBA68009934E7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		EA06C36B2BECBA73009934E7 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		EA1FB9742BEC7083000CFC9F /* Double-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double-Extension.swift"; sourceTree = "<group>"; };
 		EA1FB9762BEC7E14000CFC9F /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		EA1FB9782BEC832B000CFC9F /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 				EAE15CFC2BEBCE0900BA9F55 /* API */,
 				EAE15CE52BEB2B9F00BA9F55 /* Model */,
 				EAE15CCF2BEB1AF500BA9F55 /* Helper */,
+				EA06C3682BECBA4A009934E7 /* LoadingView */,
 				EAE15CDC2BEB276900BA9F55 /* ViewController */,
 				EA0130FB2BEA0BB7007B14C0 /* Main.storyboard */,
 				EA0130FE2BEA0BB8007B14C0 /* Assets.xcassets */,
@@ -147,6 +152,15 @@
 				EA1FB9792BEC832B000CFC9F /* FavoriteCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		EA06C3682BECBA4A009934E7 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				EA06C3692BECBA68009934E7 /* LoadingView.swift */,
+				EA06C36B2BECBA73009934E7 /* LoadingView.xib */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		EAE15CCF2BEB1AF500BA9F55 /* Helper */ = {
@@ -300,6 +314,7 @@
 				EAE15CF72BEB37D700BA9F55 /* AdImageCollectionViewCell.xib in Resources */,
 				EA0131022BEA0BB8007B14C0 /* Base in Resources */,
 				EA0131122BEA7A40007B14C0 /* BalanceTableViewCell.xib in Resources */,
+				EA06C36C2BECBA73009934E7 /* LoadingView.xib in Resources */,
 				EA0130FD2BEA0BB7007B14C0 /* Base in Resources */,
 				EAE15CD92BEB1F0900BA9F55 /* NotificationTableViewCell.xib in Resources */,
 			);
@@ -323,6 +338,7 @@
 				EAE15CFB2BEBC69700BA9F55 /* UIImageView-Extension.swift in Sources */,
 				EA1FB9772BEC7E14000CFC9F /* Favorite.swift in Sources */,
 				EAE15CED2BEB312C00BA9F55 /* Digital.swift in Sources */,
+				EA06C36A2BECBA68009934E7 /* LoadingView.swift in Sources */,
 				EA0131112BEA7A40007B14C0 /* BalanceTableViewCell.swift in Sources */,
 				EAE15CE72BEB2BC500BA9F55 /* Notification.swift in Sources */,
 				EA1FB9752BEC7083000CFC9F /* Double-Extension.swift in Sources */,

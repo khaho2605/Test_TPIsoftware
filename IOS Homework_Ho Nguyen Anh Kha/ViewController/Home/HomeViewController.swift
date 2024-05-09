@@ -9,8 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var loadingView: LoadingView!
     @IBOutlet weak var tableView: UITableView!
-    
     
     private var topCell: TopTableViewCell!
     private var balanceCell: BalanceTableViewCell!
@@ -52,6 +52,7 @@ extension HomeViewController {
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.reloadTabelView(with: 1)
+                self.loadingView.isHidden = true
             }
         }
     }
@@ -74,6 +75,7 @@ extension HomeViewController {
     }
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        self.loadingView.isHidden = false
         notiViewModel.getListNoti { [weak self] isSuccess in
             guard let self = self else { return }
             if isSuccess {
@@ -97,6 +99,11 @@ extension HomeViewController {
             DispatchQueue.main.async {
                 self.reloadTabelView(with: 1)
                 refreshControl.endRefreshing()
+                
+                //Delay to show loading view
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                    self.loadingView.isHidden = true
+                })
             }
         }
     }
