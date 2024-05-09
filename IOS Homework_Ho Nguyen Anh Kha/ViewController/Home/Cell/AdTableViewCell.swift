@@ -41,6 +41,7 @@ class AdTableViewCell: UITableViewCell {
     }
 }
 
+//MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension AdTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return adBanners.count
@@ -61,6 +62,7 @@ extension AdTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource 
     }
 }
 
+//MARK: - UICollectionViewDelegateFlowLayout
 extension AdTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.size.width, height: collectionView.bounds.size.height)

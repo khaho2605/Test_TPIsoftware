@@ -10,6 +10,7 @@ import Foundation
 final class HomeViewModel {
     var usdAmount: Double = 0
     var khrAmount: Double = 0
+    var favoriteList: [Favorite] = [Favorite]()
     var listAdBanner: [AdBanner] = [AdBanner]()
 
     func getAdBanner(completion:((_ result: Bool) -> Void)?) {
@@ -40,6 +41,25 @@ final class HomeViewModel {
             print("KHR: \(khrAmount)")
             
             completion?()
+        }
+    }
+    
+    func getListFavarite(completion:((_ result: Bool) -> Void)?) {
+        Task {
+            do {
+                guard let url = URL(string: "https://willywu0201.github.io/data/favoriteList.json")
+                else {
+                    completion?(false)
+                    return
+                }
+                let response: ListFavoriteResponse = try await fetchAPI(url: url)
+                self.favoriteList = response.result.favoriteList
+                completion?(true)
+            }
+            catch {
+                print(error.localizedDescription)
+                completion?(false)
+            }
         }
     }
      

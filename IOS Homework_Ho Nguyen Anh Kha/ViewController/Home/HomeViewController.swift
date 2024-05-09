@@ -76,8 +76,19 @@ extension HomeViewController {
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         notiViewModel.getListNoti { [weak self] isSuccess in
             guard let self = self else { return }
-            DispatchQueue.main.async {
-                self.topCell.updateBadgeNoti()
+            if isSuccess {
+                DispatchQueue.main.async {
+                    self.topCell.updateBadgeNoti()
+                }
+            }
+        }
+        
+        viewModel.getListFavarite { [weak self] isSuccess in
+            guard let self = self else { return }
+            if isSuccess {
+                DispatchQueue.main.async {
+                    self.reloadTabelView(with: 2)
+                }
             }
         }
         
@@ -115,6 +126,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyFavoriteTableViewCell", for: indexPath) as! MyFavoriteTableViewCell
+            cell.updateUI(with: viewModel.favoriteList)
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as! AdTableViewCell
@@ -132,7 +144,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case 1:
             return 370
         case 2:
-            return 130
+            return 160
         case 3:
             return 130
         default: return 0
