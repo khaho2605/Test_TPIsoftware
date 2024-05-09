@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="pLn-a4-swQ">
-                        <rect key="frame" x="145.66666666666666" y="104" width="115.99999999999997" height="26"/>
+                        <rect key="frame" x="145.66666666666666" y="100" width="115.99999999999997" height="26"/>
                         <color key="pageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </pageControl>
@@ -41,7 +41,7 @@
                     <constraint firstAttribute="trailing" secondItem="qaw-Ul-M50" secondAttribute="trailing" id="7CX-QK-gj6"/>
                     <constraint firstItem="pLn-a4-swQ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="X6W-6T-cNg"/>
                     <constraint firstItem="qaw-Ul-M50" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="eeq-ZK-fJz"/>
-                    <constraint firstItem="pLn-a4-swQ" firstAttribute="top" secondItem="qaw-Ul-M50" secondAttribute="bottom" constant="4" id="g9G-Z5-Yf4"/>
+                    <constraint firstItem="pLn-a4-swQ" firstAttribute="top" secondItem="qaw-Ul-M50" secondAttribute="bottom" id="g9G-Z5-Yf4"/>
                     <constraint firstItem="qaw-Ul-M50" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="p6o-IA-S9U"/>
                 </constraints>
             </tableViewCellContentView>

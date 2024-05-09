@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="1" width="42" height="42"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXM-K0-1jI">
-                        <rect key="frame" x="288" y="9.6666666666666643" width="24" height="25"/>
+                        <rect key="frame" x="296" y="9.6666666666666643" width="24" height="25"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" image="iconBell01Nomal"/>
                         <state key="selected" image="iconBell02Active"/>
@@ -32,7 +32,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="qXM-K0-1jI" firstAttribute="centerY" secondItem="Osv-Q6-rhc" secondAttribute="centerY" id="PW0-p2-Glm"/>
-                    <constraint firstAttribute="trailing" secondItem="qXM-K0-1jI" secondAttribute="trailing" constant="8" id="XgD-w9-5Wg"/>
+                    <constraint firstAttribute="trailing" secondItem="qXM-K0-1jI" secondAttribute="trailing" id="XgD-w9-5Wg"/>
                     <constraint firstItem="Osv-Q6-rhc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZjP-KG-Cbr"/>
                     <constraint firstItem="Osv-Q6-rhc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gqp-aK-DL3"/>
                 </constraints>
