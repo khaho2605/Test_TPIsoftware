@@ -36,6 +36,7 @@ class MyFavoriteTableViewCell: UITableViewCell {
     }
     
     private func setupCollectionView() {
+        collectionView.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "FavoriteCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FavoriteCollectionViewCell")

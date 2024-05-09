@@ -27,6 +27,7 @@ final class ListNotificationsViewController: BaseViewController {
         super.viewDidLoad()
         
         setupTableView()
+        notiTableView.backgroundColor = .white
         emptyStackView.isHidden = !listNotification.isEmpty
         notiTableView.isHidden = listNotification.isEmpty
 
