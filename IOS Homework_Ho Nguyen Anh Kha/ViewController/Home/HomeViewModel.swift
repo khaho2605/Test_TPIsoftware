@@ -33,7 +33,6 @@ final class HomeViewModel {
     }
     
     
-    
     func getAmount() {
         let urlSaving = URL(string: "https://willywu0201.github.io/data/usdSavings1.json")!
         let urlFixed = URL(string: "https://willywu0201.github.io/data/usdFixed1.json")!

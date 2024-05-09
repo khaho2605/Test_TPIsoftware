@@ -112,7 +112,6 @@
 				EA0130F52BEA0BB7007B14C0 /* AppDelegate.swift */,
 				EA0130F72BEA0BB7007B14C0 /* SceneDelegate.swift */,
 				EAE15CE52BEB2B9F00BA9F55 /* Model */,
-				EA01310E2BEA7A24007B14C0 /* Cell */,
 				EAE15CCF2BEB1AF500BA9F55 /* Helper */,
 				EAE15CDC2BEB276900BA9F55 /* ViewController */,
 				EA0130FB2BEA0BB7007B14C0 /* Main.storyboard */,
@@ -182,6 +181,7 @@
 		EAE15CDD2BEB277E00BA9F55 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EA01310E2BEA7A24007B14C0 /* Cell */,
 				EAE15CDE2BEB279400BA9F55 /* HomeViewModel.swift */,
 				EA0130F92BEA0BB7007B14C0 /* HomeViewController.swift */,
 			);

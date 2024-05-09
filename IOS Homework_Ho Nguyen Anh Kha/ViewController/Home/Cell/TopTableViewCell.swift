@@ -7,9 +7,11 @@
 
 import UIKit
 
-class TopTableViewCell: UITableViewCell {
+final class TopTableViewCell: UITableViewCell {
 
     var onTapNotiButton: (() -> Void)?
+    
+    @IBOutlet weak var notiButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,5 +27,9 @@ class TopTableViewCell: UITableViewCell {
     
     @IBAction func onTapNotiButton(_ sender: UIButton) {
         onTapNotiButton?()
+    }
+    
+    func updateBadgeNoti() {
+        notiButton.isSelected = true
     }
 }

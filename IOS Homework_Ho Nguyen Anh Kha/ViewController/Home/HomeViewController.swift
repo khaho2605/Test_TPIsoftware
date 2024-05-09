@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private var topCell: TopTableViewCell!
     private var viewModel = HomeViewModel()
     private var notiViewModel = NotificationViewModel()
     
@@ -39,12 +40,13 @@ extension HomeViewController {
             guard let self = self else { return }
             if isSuccess {
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    let indexPath = IndexPath(item: 3, section: 0)
+                    self.tableView.reloadRows(at: [indexPath], with: .top)
                 }
             }
         })
         
-        viewModel.getAAAA()
+//        viewModel.getAAAA()
     }
     
     private func setupTableView() {
@@ -60,8 +62,13 @@ extension HomeViewController {
     }
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-//        self.tableView.reloadData()
-        refreshControl.endRefreshing()
+        notiViewModel.getListNoti { [weak self] isSuccess in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.topCell.updateBadgeNoti()
+                refreshControl.endRefreshing()
+            }
+        }
     }
 }
 
@@ -76,6 +83,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TopTableViewCell", for: indexPath) as! TopTableViewCell
+            topCell = cell
             cell.onTapNotiButton = { [weak self] in
                 guard let self = self else { return }
                 let notiVC = ListNotificationsViewController()
