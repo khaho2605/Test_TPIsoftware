@@ -11,10 +11,9 @@ final class HomeViewController: BaseViewController {
     @IBOutlet weak var loadingView: LoadingView!
     @IBOutlet weak var tableView: UITableView!
     
+    private var loadingVC = UIViewController()
     private var topCell: TopTableViewCell!
-    private var balanceCell: BalanceTableViewCell!
-
-    private var viewModel = HomeViewModel()
+    private var homeViewModel = HomeViewModel()
     private var notiViewModel = NotificationViewModel()
     
     private lazy var refreshControl: UIRefreshControl = {
@@ -37,8 +36,18 @@ final class HomeViewController: BaseViewController {
 
 //MARK: - Helper
 extension HomeViewController {
+    private func showLoading() {
+        loadingVC.view.backgroundColor = .black
+        loadingVC.modalPresentationStyle = .overCurrentContext
+
+        // Animate loadingVC with a fade in animation
+        loadingVC.modalTransitionStyle = .crossDissolve
+               
+        present(loadingVC, animated: true, completion: nil)
+    }
     private func callAPI() {
-        viewModel.getAdBanner(completion: { [weak self] isSuccess in
+        self.loadingView.isHidden = false
+        homeViewModel.getAdBanner(completion: { [weak self] isSuccess in
             guard let self = self else { return }
             if isSuccess {
                 DispatchQueue.main.async {
@@ -47,7 +56,7 @@ extension HomeViewController {
             }
         })
         
-        viewModel.getAllAmount { [weak self] in
+        homeViewModel.getAllAmount { [weak self] in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.reloadTabelView(with: 1)
@@ -86,7 +95,7 @@ extension HomeViewController {
             }
         }
         
-        viewModel.getListFavarite { [weak self] isSuccess in
+        homeViewModel.getListFavarite { [weak self] isSuccess in
             guard let self = self else { return }
             if isSuccess {
                 DispatchQueue.main.async {
@@ -95,7 +104,7 @@ extension HomeViewController {
             }
         }
         
-        viewModel.getAllAmount { [weak self] in
+        homeViewModel.getAllAmount { [weak self] in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.reloadTabelView(with: 1)
@@ -130,15 +139,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "BalanceTableViewCell", for: indexPath) as! BalanceTableViewCell
-            cell.updateBalance(usd: viewModel.usdAmount, khr: viewModel.khrAmount)
+            cell.updateBalance(usd: homeViewModel.usdAmount, khr: homeViewModel.khrAmount)
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyFavoriteTableViewCell", for: indexPath) as! MyFavoriteTableViewCell
-            cell.updateUI(with: viewModel.favoriteList)
+            cell.updateUI(with: homeViewModel.favoriteList)
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as! AdTableViewCell
-            cell.updateUI(with: viewModel.listAdBanner)
+            cell.updateUI(with: homeViewModel.listAdBanner)
             return cell
         default:
             return UITableViewCell()
