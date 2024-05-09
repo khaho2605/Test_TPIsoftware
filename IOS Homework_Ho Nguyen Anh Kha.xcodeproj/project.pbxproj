@@ -22,6 +22,7 @@
 		EA01311C2BEA7E22007B14C0 /* VerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA01311B2BEA7E22007B14C0 /* VerticalButton.swift */; };
 		EA01311F2BEA82FC007B14C0 /* TopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA01311D2BEA82FC007B14C0 /* TopTableViewCell.swift */; };
 		EA0131202BEA82FC007B14C0 /* TopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA01311E2BEA82FC007B14C0 /* TopTableViewCell.xib */; };
+		EA1FB9752BEC7083000CFC9F /* Double-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FB9742BEC7083000CFC9F /* Double-Extension.swift */; };
 		EAE15CD32BEB1B5200BA9F55 /* ListNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE15CD12BEB1B5200BA9F55 /* ListNotificationsViewController.swift */; };
 		EAE15CD42BEB1B5200BA9F55 /* ListNotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE15CD22BEB1B5200BA9F55 /* ListNotificationsViewController.xib */; };
 		EAE15CD82BEB1F0900BA9F55 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE15CD62BEB1F0900BA9F55 /* NotificationTableViewCell.swift */; };
@@ -59,6 +60,7 @@
 		EA01311B2BEA7E22007B14C0 /* VerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalButton.swift; sourceTree = "<group>"; };
 		EA01311D2BEA82FC007B14C0 /* TopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableViewCell.swift; sourceTree = "<group>"; };
 		EA01311E2BEA82FC007B14C0 /* TopTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopTableViewCell.xib; sourceTree = "<group>"; };
+		EA1FB9742BEC7083000CFC9F /* Double-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double-Extension.swift"; sourceTree = "<group>"; };
 		EAE15CD12BEB1B5200BA9F55 /* ListNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNotificationsViewController.swift; sourceTree = "<group>"; };
 		EAE15CD22BEB1B5200BA9F55 /* ListNotificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListNotificationsViewController.xib; sourceTree = "<group>"; };
 		EAE15CD62BEB1F0900BA9F55 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				EA01311B2BEA7E22007B14C0 /* VerticalButton.swift */,
 				EAE15CDA2BEB1F7400BA9F55 /* UIView-Extension.swift */,
 				EAE15CFA2BEBC69700BA9F55 /* UIImageView-Extension.swift */,
+				EA1FB9742BEC7083000CFC9F /* Double-Extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				EAE15CED2BEB312C00BA9F55 /* Digital.swift in Sources */,
 				EA0131112BEA7A40007B14C0 /* BalanceTableViewCell.swift in Sources */,
 				EAE15CE72BEB2BC500BA9F55 /* Notification.swift in Sources */,
+				EA1FB9752BEC7083000CFC9F /* Double-Extension.swift in Sources */,
 				EAE15CDF2BEB279400BA9F55 /* HomeViewModel.swift in Sources */,
 				EAE15CFE2BEBCE1A00BA9F55 /* API.swift in Sources */,
 				EAE15CD82BEB1F0900BA9F55 /* NotificationTableViewCell.swift in Sources */,

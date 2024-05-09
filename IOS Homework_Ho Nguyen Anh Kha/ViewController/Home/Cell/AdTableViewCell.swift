@@ -29,7 +29,6 @@ class AdTableViewCell: UITableViewCell {
     func updateUI(with listAdBanner: [AdBanner]) {
         adBanners = listAdBanner
         pageControl.numberOfPages = adBanners.count
-        print("Ad banner count: \(listAdBanner.count)")
         if adBanners.count > 0 {
             collectionView.reloadData()
         }

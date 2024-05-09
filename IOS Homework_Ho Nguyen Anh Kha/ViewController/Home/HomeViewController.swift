@@ -11,7 +11,10 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    
     private var topCell: TopTableViewCell!
+    private var balanceCell: BalanceTableViewCell!
+
     private var viewModel = HomeViewModel()
     private var notiViewModel = NotificationViewModel()
     
@@ -40,13 +43,22 @@ extension HomeViewController {
             guard let self = self else { return }
             if isSuccess {
                 DispatchQueue.main.async {
-                    let indexPath = IndexPath(item: 3, section: 0)
-                    self.tableView.reloadRows(at: [indexPath], with: .top)
+                    self.reloadTabelView(with: 3)
                 }
             }
         })
         
-//        viewModel.getAAAA()
+        viewModel.getAllAmount { [weak self] in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.reloadTabelView(with: 1)
+            }
+        }
+    }
+    
+    private func reloadTabelView(with row: Int) {
+        let indexPath = IndexPath(item: row, section: 0)
+        self.tableView.reloadRows(at: [indexPath], with: .none)
     }
     
     private func setupTableView() {
@@ -66,6 +78,13 @@ extension HomeViewController {
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.topCell.updateBadgeNoti()
+            }
+        }
+        
+        viewModel.getAllAmount { [weak self] in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.reloadTabelView(with: 1)
                 refreshControl.endRefreshing()
             }
         }
@@ -92,6 +111,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "BalanceTableViewCell", for: indexPath) as! BalanceTableViewCell
+            cell.updateBalance(usd: viewModel.usdAmount, khr: viewModel.khrAmount)
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyFavoriteTableViewCell", for: indexPath) as! MyFavoriteTableViewCell

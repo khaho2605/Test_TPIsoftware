@@ -13,6 +13,9 @@ class BalanceTableViewCell: UITableViewCell {
     @IBOutlet weak var usdBalanceTextField: UITextField!
     @IBOutlet weak var khrBalanceTextField: UITextField!
     
+    private var usdBalance = ""
+    private var khrBalance = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
@@ -29,13 +32,17 @@ class BalanceTableViewCell: UITableViewCell {
         showBalance(with: !eyesButton.isSelected)
     }
     
+    func updateBalance(usd: Double, khr: Double) {
+        usdBalance = usd.formattedString
+        khrBalance = khr.formattedString
+        showBalance(with: !eyesButton.isSelected)
+    }
+    
     private func showBalance(with isShow: Bool) {
-        let usd = usdBalanceTextField.text ?? ""
-        let khr = khrBalanceTextField.text ?? ""
-        let hideUSD = String(repeating: "*", count: usd.count)
-        let hideKHR = String(repeating: "*", count: khr.count)
+        let hideUSD = String(repeating: "*", count: usdBalance.count)
+        let hideKHR = String(repeating: "*", count: khrBalance.count)
         
-        usdBalanceTextField.text = isShow ? usd : hideUSD
-        khrBalanceTextField.text = isShow ? khr : hideKHR
+        usdBalanceTextField.text = isShow ? usdBalance : hideUSD
+        khrBalanceTextField.text = isShow ? khrBalance : hideKHR
     }
 }
