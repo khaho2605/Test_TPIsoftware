@@ -32,10 +32,6 @@ final class CustomTabBarVC: UITabBarController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    private func initTabBar() {
-        
-    }
-    
     private func setupCustomTabBar() {
         //Home tab
         let profileTab = CustomTabBarItem(
