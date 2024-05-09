@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListNotificationsViewController: UIViewController {
+final class ListNotificationsViewController: BaseViewController {
 
     @IBOutlet weak var notiTableView: UITableView!
     

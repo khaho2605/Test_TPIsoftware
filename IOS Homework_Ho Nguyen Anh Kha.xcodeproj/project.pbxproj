@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EA0130F62BEA0BB7007B14C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0130F52BEA0BB7007B14C0 /* AppDelegate.swift */; };
 		EA0130F82BEA0BB7007B14C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0130F72BEA0BB7007B14C0 /* SceneDelegate.swift */; };
-		EA0130FA2BEA0BB7007B14C0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0130F92BEA0BB7007B14C0 /* HomeViewController.swift */; };
 		EA0130FD2BEA0BB7007B14C0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EA0130FC2BEA0BB7007B14C0 /* Base */; };
 		EA0130FF2BEA0BB8007B14C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0130FE2BEA0BB8007B14C0 /* Assets.xcassets */; };
 		EA0131022BEA0BB8007B14C0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EA0131012BEA0BB8007B14C0 /* Base */; };
@@ -24,6 +23,19 @@
 		EA0131202BEA82FC007B14C0 /* TopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA01311E2BEA82FC007B14C0 /* TopTableViewCell.xib */; };
 		EA06C36A2BECBA68009934E7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C3692BECBA68009934E7 /* LoadingView.swift */; };
 		EA06C36C2BECBA73009934E7 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA06C36B2BECBA73009934E7 /* LoadingView.xib */; };
+		EA06C3752BECD277009934E7 /* CustomTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C3742BECD277009934E7 /* CustomTabBarItem.swift */; };
+		EA06C3772BECD292009934E7 /* CustomTabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C3762BECD292009934E7 /* CustomTabItemView.swift */; };
+		EA06C3792BECD350009934E7 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C3782BECD350009934E7 /* CustomTabBar.swift */; };
+		EA06C37B2BECD38E009934E7 /* CustomTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C37A2BECD38E009934E7 /* CustomTabBarVC.swift */; };
+		EA06C37F2BECD819009934E7 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA06C37E2BECD819009934E7 /* AccountViewController.xib */; };
+		EA06C3802BECD819009934E7 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C37D2BECD819009934E7 /* AccountViewController.swift */; };
+		EA06C3852BECD862009934E7 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA06C3842BECD862009934E7 /* LocationViewController.xib */; };
+		EA06C3862BECD862009934E7 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C3832BECD862009934E7 /* LocationViewController.swift */; };
+		EA06C38A2BECD8AA009934E7 /* ServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA06C3892BECD8AA009934E7 /* ServiceViewController.xib */; };
+		EA06C38B2BECD8AA009934E7 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C3882BECD8AA009934E7 /* ServiceViewController.swift */; };
+		EA06C38D2BECE88E009934E7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C38C2BECE88E009934E7 /* BaseViewController.swift */; };
+		EA06C3912BECE987009934E7 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA06C3902BECE987009934E7 /* HomeViewController.xib */; };
+		EA06C3922BECE987009934E7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C38F2BECE987009934E7 /* HomeViewController.swift */; };
 		EA1FB9752BEC7083000CFC9F /* Double-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FB9742BEC7083000CFC9F /* Double-Extension.swift */; };
 		EA1FB9772BEC7E14000CFC9F /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FB9762BEC7E14000CFC9F /* Favorite.swift */; };
 		EA1FB97A2BEC832B000CFC9F /* FavoriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1FB9792BEC832B000CFC9F /* FavoriteCollectionViewCell.xib */; };
@@ -51,7 +63,6 @@
 		EA0130F22BEA0BB7007B14C0 /* IOS Homework_Ho Nguyen Anh Kha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS Homework_Ho Nguyen Anh Kha.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0130F52BEA0BB7007B14C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA0130F72BEA0BB7007B14C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA0130F92BEA0BB7007B14C0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EA0130FC2BEA0BB7007B14C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA0130FE2BEA0BB8007B14C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA0131012BEA0BB8007B14C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +78,19 @@
 		EA01311E2BEA82FC007B14C0 /* TopTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopTableViewCell.xib; sourceTree = "<group>"; };
 		EA06C3692BECBA68009934E7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		EA06C36B2BECBA73009934E7 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		EA06C3742BECD277009934E7 /* CustomTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarItem.swift; sourceTree = "<group>"; };
+		EA06C3762BECD292009934E7 /* CustomTabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabItemView.swift; sourceTree = "<group>"; };
+		EA06C3782BECD350009934E7 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		EA06C37A2BECD38E009934E7 /* CustomTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarVC.swift; sourceTree = "<group>"; };
+		EA06C37D2BECD819009934E7 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		EA06C37E2BECD819009934E7 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		EA06C3832BECD862009934E7 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		EA06C3842BECD862009934E7 /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
+		EA06C3882BECD8AA009934E7 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		EA06C3892BECD8AA009934E7 /* ServiceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceViewController.xib; sourceTree = "<group>"; };
+		EA06C38C2BECE88E009934E7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EA06C38F2BECE987009934E7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EA06C3902BECE987009934E7 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		EA1FB9742BEC7083000CFC9F /* Double-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double-Extension.swift"; sourceTree = "<group>"; };
 		EA1FB9762BEC7E14000CFC9F /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		EA1FB9782BEC832B000CFC9F /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -171,6 +195,44 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
+		EA06C3732BECD265009934E7 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				EA06C3742BECD277009934E7 /* CustomTabBarItem.swift */,
+				EA06C3762BECD292009934E7 /* CustomTabItemView.swift */,
+				EA06C3782BECD350009934E7 /* CustomTabBar.swift */,
+				EA06C37A2BECD38E009934E7 /* CustomTabBarVC.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		EA06C37C2BECD7FF009934E7 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				EA06C37D2BECD819009934E7 /* AccountViewController.swift */,
+				EA06C37E2BECD819009934E7 /* AccountViewController.xib */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		EA06C3812BECD848009934E7 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				EA06C3832BECD862009934E7 /* LocationViewController.swift */,
+				EA06C3842BECD862009934E7 /* LocationViewController.xib */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		EA06C3872BECD893009934E7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EA06C3882BECD8AA009934E7 /* ServiceViewController.swift */,
+				EA06C3892BECD8AA009934E7 /* ServiceViewController.xib */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		EAE15CCF2BEB1AF500BA9F55 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +267,12 @@
 		EAE15CDC2BEB276900BA9F55 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				EA06C38C2BECE88E009934E7 /* BaseViewController.swift */,
+				EA06C3732BECD265009934E7 /* Tabbar */,
 				EAE15CDD2BEB277E00BA9F55 /* Home */,
+				EA06C37C2BECD7FF009934E7 /* Account */,
+				EA06C3812BECD848009934E7 /* Location */,
+				EA06C3872BECD893009934E7 /* Service */,
 				EAE15CD02BEB1B1C00BA9F55 /* Notification */,
 			);
 			path = ViewController;
@@ -214,9 +281,10 @@
 		EAE15CDD2BEB277E00BA9F55 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				EA01310E2BEA7A24007B14C0 /* Cell */,
 				EAE15CDE2BEB279400BA9F55 /* HomeViewModel.swift */,
-				EA0130F92BEA0BB7007B14C0 /* HomeViewController.swift */,
+				EA06C38F2BECE987009934E7 /* HomeViewController.swift */,
+				EA06C3902BECE987009934E7 /* HomeViewController.xib */,
+				EA01310E2BEA7A24007B14C0 /* Cell */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -318,13 +386,17 @@
 				EA0131162BEA7AB1007B14C0 /* MyFavoriteTableViewCell.xib in Resources */,
 				EA0130FF2BEA0BB8007B14C0 /* Assets.xcassets in Resources */,
 				EA01311A2BEA7AEC007B14C0 /* AdTableViewCell.xib in Resources */,
+				EA06C38A2BECD8AA009934E7 /* ServiceViewController.xib in Resources */,
 				EA1FB97A2BEC832B000CFC9F /* FavoriteCollectionViewCell.xib in Resources */,
 				EAE15CF72BEB37D700BA9F55 /* AdImageCollectionViewCell.xib in Resources */,
 				EA0131022BEA0BB8007B14C0 /* Base in Resources */,
 				EA0131122BEA7A40007B14C0 /* BalanceTableViewCell.xib in Resources */,
+				EA06C37F2BECD819009934E7 /* AccountViewController.xib in Resources */,
 				EA06C36C2BECBA73009934E7 /* LoadingView.xib in Resources */,
 				EA0130FD2BEA0BB7007B14C0 /* Base in Resources */,
 				EAE15CD92BEB1F0900BA9F55 /* NotificationTableViewCell.xib in Resources */,
+				EA06C3852BECD862009934E7 /* LocationViewController.xib in Resources */,
+				EA06C3912BECE987009934E7 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,19 +412,25 @@
 				EA0131192BEA7AEC007B14C0 /* AdTableViewCell.swift in Sources */,
 				EA0131152BEA7AB1007B14C0 /* MyFavoriteTableViewCell.swift in Sources */,
 				EA01311C2BEA7E22007B14C0 /* VerticalButton.swift in Sources */,
+				EA06C3922BECE987009934E7 /* HomeViewController.swift in Sources */,
 				EAE15CF62BEB37D700BA9F55 /* AdImageCollectionViewCell.swift in Sources */,
 				EAE15CF02BEB325100BA9F55 /* AdBanner.swift in Sources */,
-				EA0130FA2BEA0BB7007B14C0 /* HomeViewController.swift in Sources */,
+				EA06C38D2BECE88E009934E7 /* BaseViewController.swift in Sources */,
+				EA06C3802BECD819009934E7 /* AccountViewController.swift in Sources */,
 				EAE15CFB2BEBC69700BA9F55 /* UIImageView-Extension.swift in Sources */,
 				EA1FB9772BEC7E14000CFC9F /* Favorite.swift in Sources */,
 				EAE15CED2BEB312C00BA9F55 /* Digital.swift in Sources */,
 				EA06C36A2BECBA68009934E7 /* LoadingView.swift in Sources */,
 				EA0131112BEA7A40007B14C0 /* BalanceTableViewCell.swift in Sources */,
 				EAE15CE72BEB2BC500BA9F55 /* Notification.swift in Sources */,
+				EA06C3862BECD862009934E7 /* LocationViewController.swift in Sources */,
 				EA1FB9752BEC7083000CFC9F /* Double-Extension.swift in Sources */,
+				EA06C38B2BECD8AA009934E7 /* ServiceViewController.swift in Sources */,
+				EA06C37B2BECD38E009934E7 /* CustomTabBarVC.swift in Sources */,
 				EA1FB97B2BEC832B000CFC9F /* FavoriteCollectionViewCell.swift in Sources */,
 				EAE15CDF2BEB279400BA9F55 /* HomeViewModel.swift in Sources */,
 				EAE15CFE2BEBCE1A00BA9F55 /* API.swift in Sources */,
+				EA06C3772BECD292009934E7 /* CustomTabItemView.swift in Sources */,
 				EAE15CD82BEB1F0900BA9F55 /* NotificationTableViewCell.swift in Sources */,
 				EA0130F62BEA0BB7007B14C0 /* AppDelegate.swift in Sources */,
 				EAE15CE92BEB2F5B00BA9F55 /* Saving.swift in Sources */,
@@ -360,7 +438,9 @@
 				EA0130F82BEA0BB7007B14C0 /* SceneDelegate.swift in Sources */,
 				EA01311F2BEA82FC007B14C0 /* TopTableViewCell.swift in Sources */,
 				EAE15CF92BEBC2CC00BA9F55 /* NotificationViewModel.swift in Sources */,
+				EA06C3752BECD277009934E7 /* CustomTabBarItem.swift in Sources */,
 				EAE15D002BEBCE5700BA9F55 /* APIError.swift in Sources */,
+				EA06C3792BECD350009934E7 /* CustomTabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

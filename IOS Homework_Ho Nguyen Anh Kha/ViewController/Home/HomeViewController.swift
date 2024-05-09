@@ -2,13 +2,12 @@
 //  HomeViewController.swift
 //  IOS Homework_Ho Nguyen Anh Kha
 //
-//  Created by Kha on 7/5/24.
+//  Created by Kha on 9/5/24.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+final class HomeViewController: BaseViewController {
     @IBOutlet weak var loadingView: LoadingView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -63,14 +62,16 @@ extension HomeViewController {
     }
     
     private func setupTableView() {
-        tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         tableView.refreshControl = refreshControl
+        tableView.showsVerticalScrollIndicator = false
+
         tableView.register(UINib(nibName: "TopTableViewCell", bundle: nil), forCellReuseIdentifier: "TopTableViewCell")
         tableView.register(UINib(nibName: "BalanceTableViewCell", bundle: nil), forCellReuseIdentifier: "BalanceTableViewCell")
         tableView.register(UINib(nibName: "MyFavoriteTableViewCell", bundle: nil), forCellReuseIdentifier: "MyFavoriteTableViewCell")
-        tableView.register(UINib(nibName: "AdTableViewCell", bundle: nil), forCellReuseIdentifier: "AdTableViewCell")        
+        tableView.register(UINib(nibName: "AdTableViewCell", bundle: nil), forCellReuseIdentifier: "AdTableViewCell")
         
     }
     

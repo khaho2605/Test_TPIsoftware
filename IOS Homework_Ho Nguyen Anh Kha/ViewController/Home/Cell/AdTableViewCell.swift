@@ -24,7 +24,7 @@ class AdTableViewCell: UITableViewCell {
         
         selectionStyle = .none
         setupCollectionView()
-        timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(scrollNext), userInfo: nil, repeats: true)
+//        timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(scrollNext), userInfo: nil, repeats: true)
     }
     
     func updateUI(with listAdBanner: [AdBanner]) {
