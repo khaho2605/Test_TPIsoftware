@@ -125,7 +125,7 @@
 				EAE15CFC2BEBCE0900BA9F55 /* API */,
 				EAE15CE52BEB2B9F00BA9F55 /* Model */,
 				EAE15CCF2BEB1AF500BA9F55 /* Helper */,
-				EA06C3682BECBA4A009934E7 /* LoadingView */,
+				EA06C36D2BECC9D9009934E7 /* CustomView */,
 				EAE15CDC2BEB276900BA9F55 /* ViewController */,
 				EA0130FB2BEA0BB7007B14C0 /* Main.storyboard */,
 				EA0130FE2BEA0BB8007B14C0 /* Assets.xcassets */,
@@ -161,6 +161,14 @@
 				EA06C36B2BECBA73009934E7 /* LoadingView.xib */,
 			);
 			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		EA06C36D2BECC9D9009934E7 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				EA06C3682BECBA4A009934E7 /* LoadingView */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		EAE15CCF2BEB1AF500BA9F55 /* Helper */ = {

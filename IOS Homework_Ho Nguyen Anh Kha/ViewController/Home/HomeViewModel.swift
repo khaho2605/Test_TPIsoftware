@@ -35,11 +35,7 @@ final class HomeViewModel {
     func getAllAmount(completion:(() -> Void)?) {
         Task {
             self.usdAmount = await getAmount(with: "usd")
-            print("USD: \(usdAmount)")
-            
-            self.khrAmount = await getAmount(with: "khr")
-            print("KHR: \(khrAmount)")
-            
+            self.khrAmount = await getAmount(with: "khr")            
             completion?()
         }
     }

@@ -12,6 +12,11 @@ class AdTableViewCell: UITableViewCell {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    //Timer for auto change ad image
+    private var timer: Timer?
+    private var currentIndex: Int = 0
+    private let timeInterval: Double = 3
+    
     private var adBanners = [AdBanner]()
     
     override func awakeFromNib() {
@@ -19,11 +24,7 @@ class AdTableViewCell: UITableViewCell {
         
         selectionStyle = .none
         setupCollectionView()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
+        timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(scrollNext), userInfo: nil, repeats: true)
     }
     
     func updateUI(with listAdBanner: [AdBanner]) {
@@ -32,6 +33,16 @@ class AdTableViewCell: UITableViewCell {
         if adBanners.count > 0 {
             collectionView.reloadData()
         }
+    }
+    
+    @objc private func scrollNext(){
+        if(currentIndex < adBanners.count - 1){
+            currentIndex = currentIndex + 1;
+            
+        } else if (currentIndex == adBanners.count - 1) {
+            currentIndex = 0;
+        }
+        collectionView.scrollToItem(at: IndexPath(item: currentIndex, section: 0), at: .left, animated: true)
     }
     
     private func setupCollectionView() {
@@ -57,8 +68,8 @@ extension AdTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource 
         let offSet = scrollView.contentOffset.x
         let width = scrollView.frame.width
         let horizontalCenter = width / 2
-
-        pageControl.currentPage = Int(offSet + horizontalCenter) / Int(width)
+        currentIndex = Int(offSet + horizontalCenter) / Int(width)
+        pageControl.currentPage = currentIndex
     }
 }
 
