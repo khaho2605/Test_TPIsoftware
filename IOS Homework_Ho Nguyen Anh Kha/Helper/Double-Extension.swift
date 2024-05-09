@@ -13,6 +13,7 @@ extension Double {
     private static var numberFormatter: NumberFormatter = {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal // this style adds thousand separators.
+        numberFormatter.groupingSeparator = ","
         return numberFormatter
     }()
 
