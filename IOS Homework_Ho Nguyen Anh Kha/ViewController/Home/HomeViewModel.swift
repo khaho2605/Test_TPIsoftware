@@ -32,18 +32,19 @@ final class HomeViewModel {
         }
     }
     
-    func getAllAmount(completion:(() -> Void)?) {
+    func getAllAmount(isPullRequest: Bool = false, completion:(() -> Void)?) {
         Task {
-            self.usdAmount = await getAmount(with: "usd")
-            self.khrAmount = await getAmount(with: "khr")            
+            self.usdAmount = await getAmount(with: "usd", isPullRequest: isPullRequest)
+            self.khrAmount = await getAmount(with: "khr", isPullRequest: isPullRequest)
             completion?()
         }
     }
     
-    func getListFavarite(completion:((_ result: Bool) -> Void)?) {
+    func getListFavarite(isPullRequest: Bool = false, completion:((_ result: Bool) -> Void)?) {
         Task {
             do {
-                guard let url = URL(string: "\(APIManager.baseURL)/favoriteList.json")
+                let name = isPullRequest ? "favoriteList" : "emptyFavoriteList"
+                guard let url = URL(string: "\(APIManager.baseURL)/\(name).json")
                 else {
                     completion?(false)
                     return
@@ -63,10 +64,11 @@ final class HomeViewModel {
 
 // MARK: - Private function
 extension HomeViewModel {
-    private func getAmount(with symbol: String) async -> Double {
-       let urlSaving = URL(string: "\(APIManager.baseURL)/\(symbol)Savings1.json")!
-       let urlFixed = URL(string: "\(APIManager.baseURL)/\(symbol)Fixed1.json")!
-       let urlDigital = URL(string: "\(APIManager.baseURL)/\(symbol)Digital1.json")!
+    private func getAmount(with symbol: String, isPullRequest: Bool = false) async -> Double {
+        let number = isPullRequest ? "2" : "1"
+       let urlSaving = URL(string: "\(APIManager.baseURL)/\(symbol)Savings\(number).json")!
+       let urlFixed = URL(string: "\(APIManager.baseURL)/\(symbol)Fixed\(number).json")!
+       let urlDigital = URL(string: "\(APIManager.baseURL)/\(symbol)Digital\(number).json")!
        
        do {
            var listBalance: [Balance] = [Balance]()

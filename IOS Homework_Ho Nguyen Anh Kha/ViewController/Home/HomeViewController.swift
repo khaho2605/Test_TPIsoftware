@@ -21,14 +21,12 @@ final class HomeViewController: BaseViewController {
         refreshControl.addTarget(self, action:
                                     #selector(handleRefresh(_:)),
                                  for: .valueChanged)
-        
         return refreshControl
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        callAPI()
+        callAPI(isPullRequest: false)
         setupTableView()
     }
 
@@ -36,12 +34,21 @@ final class HomeViewController: BaseViewController {
 
 //MARK: - Helper
 extension HomeViewController {
-    private func callAPI() {
+    private func callAPI(isPullRequest: Bool) {
         self.loadingView.isHidden = false
-        notiViewModel.getListNoti(isEmpty: true) { [weak self] _ in
+        notiViewModel.getListNoti(isPullRequest: isPullRequest) { [weak self] _ in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.topCell.updateBadgeNoti(with: self.notiViewModel.listNotification)
+            }
+        }
+        
+        homeViewModel.getListFavarite(isPullRequest: isPullRequest) { [weak self] isSuccess in
+            guard let self = self else { return }
+            if isSuccess {
+                DispatchQueue.main.async {
+                    self.reloadTabelView(with: 2)
+                }
             }
         }
         
@@ -54,13 +61,24 @@ extension HomeViewController {
             }
         })
         
-        homeViewModel.getAllAmount { [weak self] in
+        homeViewModel.getAllAmount(isPullRequest: isPullRequest) { [weak self] in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.reloadTabelView(with: 1)
-                self.loadingView.isHidden = true
+                if isPullRequest {  //Delay to show loading view
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                        self.refreshControl.endRefreshing()
+                        self.loadingView.isHidden = true
+                    })
+                } else {
+                    self.loadingView.isHidden = true
+                }
             }
         }
+    }
+    
+    @objc private func handleRefresh(_ refreshControl: UIRefreshControl) {
+        callAPI(isPullRequest: true)
     }
     
     private func reloadTabelView(with row: Int) {
@@ -82,39 +100,6 @@ extension HomeViewController {
         
     }
     
-    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-        self.loadingView.isHidden = false
-        notiViewModel.getListNoti { [weak self] isSuccess in
-            guard let self = self else { return }
-            if isSuccess {
-                DispatchQueue.main.async {
-                    self.topCell.updateBadgeNoti(with: self.notiViewModel.listNotification)
-                }
-            }
-        }
-        
-        homeViewModel.getListFavarite { [weak self] isSuccess in
-            guard let self = self else { return }
-            if isSuccess {
-                DispatchQueue.main.async {
-                    self.reloadTabelView(with: 2)
-                }
-            }
-        }
-        
-        homeViewModel.getAllAmount { [weak self] in
-            guard let self = self else { return }
-            DispatchQueue.main.async {
-                self.reloadTabelView(with: 1)
-                refreshControl.endRefreshing()
-                
-                //Delay to show loading view
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                    self.loadingView.isHidden = true
-                })
-            }
-        }
-    }
 }
 
 //MARK: - UITableViewDelegate, UITableViewDataSource

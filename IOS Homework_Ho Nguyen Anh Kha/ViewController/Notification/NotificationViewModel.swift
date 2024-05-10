@@ -11,10 +11,10 @@ final class NotificationViewModel {
     
     var listNotification = [Notification]()
     
-    func getListNoti(isEmpty: Bool = false, completion:((_ result: Bool) -> Void)?) {
+    func getListNoti(isPullRequest: Bool = false, completion:((_ result: Bool) -> Void)?) {
         Task {
             do {
-                let name = isEmpty ? "emptyNotificationList" : "notificationList"
+                let name = isPullRequest ? "notificationList" : "emptyNotificationList"
                 guard let url = URL(string: "\(APIManager.baseURL)/\(name).json")
                 else {
                     completion?(false)
